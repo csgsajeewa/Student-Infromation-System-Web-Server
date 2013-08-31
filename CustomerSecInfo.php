@@ -13,7 +13,7 @@ class CustomerSecInfo {
           $this->connection=new connection();
           $conn =$this->connection->createConnection("user_information");
 
-          $query="INSERT INTO user_sec_info(user_name,password)
+          $query="INSERT INTO user_sec_info(index_number,password)
                   VALUES('$user_name','$password');";
 
           $result=mysqli_query($conn,$query);
