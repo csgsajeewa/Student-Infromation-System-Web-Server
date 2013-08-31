@@ -10,7 +10,7 @@ class CustomerSecInfo {
 
     public function enterData($user_name,$password){
 
-          $this->connection=new connection();
+          $this->connection=new Connection();
           $conn =$this->connection->createConnection("user_information");
 
           $query="INSERT INTO user_sec_info(index_number,password)
@@ -27,14 +27,15 @@ class CustomerSecInfo {
 
           $validated=false;
           $connection=new Connection();
-          $conn =$connection->createConnection("database_1");
+          $conn =$connection->createConnection("user_information");
 
-          $query="SELECT *FROM customer_security_info WHERE user_name='$user_name'";
+          $query="SELECT *FROM user_sec_info WHERE index_number='$user_name'";
           $result=mysqli_query($conn,$query) or die("error");
 
           if(mysqli_num_rows ($result)==0)
           {
-              echo 'ERROR--user name is not exist!!!!!!!!!!!!!!!!!';
+              #echo 'ERROR--user name is not exist!!!!!!!!!!!!!!!!!';
+   
           }
 
           else
@@ -42,7 +43,7 @@ class CustomerSecInfo {
               $row = mysqli_fetch_array($result);
               if($row["password"]==$password)
               {
-                  echo 'ERROR--password is wrong!!!!!!!!!!!!!!!!!';
+                 # echo 'ERROR--password is wrong!!!!!!!!!!!!!!!!!';
                   $validated=true;
               }
           }
