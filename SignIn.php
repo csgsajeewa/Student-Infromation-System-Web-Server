@@ -1,7 +1,7 @@
 
 
 <?php
-
+ #used for sign in purposes
   require_once  'CustomerSecInfo.php';
 
 
