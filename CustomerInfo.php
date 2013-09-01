@@ -45,7 +45,28 @@ class CustomerInfo {
           $connection->endConnection($conn);
           return $array;
     }
-// used bu customers to check details
+//register for news service
+     public function register($index_number){
+
+          $connection=new Connection();
+          $conn =$connection->createConnection("user_information");
+         
+          $query="SELECT *FROM user_info WHERE index_number='$index_number'";
+
+          $result=mysqli_query($conn,$query) or die("error");
+
+          while($row = mysqli_fetch_array($result))
+          {
+              $array["index_number"]=$row["index_number"];
+              
+             
+              
+          }
+
+          $connection->endConnection($conn);
+          return $array;
+    }
+   
    
 }
 ?>

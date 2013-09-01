@@ -12,7 +12,7 @@ class CustomerSecInfo {
 
           $this->connection=new Connection();
           $conn =$this->connection->createConnection("user_information");
-
+          $password=  md5($password);
           $query="INSERT INTO user_sec_info(index_number,password)
                   VALUES('$user_name','$password');";
 
@@ -41,7 +41,7 @@ class CustomerSecInfo {
           else
           {
               $row = mysqli_fetch_array($result);
-              if($row["password"]==$password)
+              if($row["password"]==md5($password))
               {
                  # echo 'ERROR--password is wrong!!!!!!!!!!!!!!!!!';
                   $validated=true;

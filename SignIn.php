@@ -14,7 +14,7 @@
       if($validate)
       {
          //msg send to mobile app upon suceessfull login
-         echo 'http://192.168.42.35:8080/WebServer/AccountDetails.php?index='.$user_name;
+         echo 'http://192.168.42.35/WebServer/AccountDetails.php?index='.$user_name;
 
       }
 
