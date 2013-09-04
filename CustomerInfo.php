@@ -7,7 +7,7 @@ class CustomerInfo {
     public function  __construct() {
 
     }
-
+  #use to store data about user when he signup 
     public function enterData($user_name,$first_name,$last_name,$department,$faculty,$year_of_study,$semester,$email_address){
 
           $this->connection=new Connection();
@@ -23,7 +23,7 @@ class CustomerInfo {
 
 
 
-
+ # this is used to display profile information
     public function searchByIndex($index_number){
 
           $connection=new Connection();
@@ -45,7 +45,7 @@ class CustomerInfo {
           $connection->endConnection($conn);
           return $array;
     }
-//register for news service
+//register for news service not used remove later
      public function register($index_number){
 
           $connection=new Connection();

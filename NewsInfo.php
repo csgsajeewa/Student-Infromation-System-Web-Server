@@ -1,4 +1,5 @@
 <?php
+#relate to news items table add news items to the table by admin
 require_once  'Connection.php';
 
 class NewsInfo {
@@ -7,7 +8,7 @@ class NewsInfo {
     public function  __construct() {
 
     }
-
+#admin uses this function to add news items to function - call by NewsAddForm.html
     public function enterData($fac_code,$dept_code,$heading,$details){
 
           $this->connection=new Connection();
@@ -22,22 +23,23 @@ class NewsInfo {
     }
 
 
-###################################not used#################################################
+#ProvideNews.php
+#Get fac_code and dept_code and then find all the news items related to that user.    
 
-    public function searchByIndex($index_number){
+    public function searchNews($fac_code,$dept_code){
 
           $connection=new Connection();
           $conn =$connection->createConnection("user_information");
          
-          $query="SELECT *FROM user_info WHERE index_number='$index_number'";
+          $query="SELECT *FROM news_items WHERE fac_code='$fac_code' and dept_code='$dept_code'";
 
           $result=mysqli_query($conn,$query) or die("error");
-
+          $i=0;
           while($row = mysqli_fetch_array($result))
           {
-              $array["index_number"]=$row["index_number"];
-              $array["first_name"]=$row["first_name"];
-              $array["last_name"]=$row["last_name"] ;
+              $array[i]["heading"]=$row["heading"];
+              $array[i]["details"]=$row["details"];
+              $array[i]["date"]=$row["date"] ;
              
               
           }
@@ -45,28 +47,7 @@ class NewsInfo {
           $connection->endConnection($conn);
           return $array;
     }
-//register for news service
-     public function register($index_number){
 
-          $connection=new Connection();
-          $conn =$connection->createConnection("user_information");
-         
-          $query="SELECT *FROM user_info WHERE index_number='$index_number'";
-
-          $result=mysqli_query($conn,$query) or die("error");
-
-          while($row = mysqli_fetch_array($result))
-          {
-              $array["index_number"]=$row["index_number"];
-              
-             
-              
-          }
-
-          $connection->endConnection($conn);
-          return $array;
-    }
-   
    
 }
 ?>

@@ -11,4 +11,7 @@
      $newsInfo=new NewsInfo();
      $newsInfo->enterData($fac_code,$dept_code,$heading,$details);
      
+     $main_page_url="NewsAddForm.html";
+      header('Location:'. $main_page_url);
+     
 ?>

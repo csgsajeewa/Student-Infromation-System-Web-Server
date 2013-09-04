@@ -1,5 +1,6 @@
 <?php
 #http://192.168.42.35/WebServer/Register.PHP?index="+index+"&fac_code="+fac_code+"&dept_code="+dept_code
+#used by mobile application to send registration details for news service
 require_once  'UserNewsRegInfo.php';
 
 
