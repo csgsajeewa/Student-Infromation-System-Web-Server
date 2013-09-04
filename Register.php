@@ -4,6 +4,7 @@
 require_once  'UserNewsRegInfo.php';
 
 
+
       $user_name=  trim($_GET['index']);
       $fac_code=  trim($_GET['fac_code']);
       $dept_code=  trim($_GET['dept_code']);

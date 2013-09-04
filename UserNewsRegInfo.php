@@ -17,12 +17,31 @@ class UserNewsRegInfo {
           $this->connection=new Connection();
           $conn =$this->connection->createConnection("user_information");
 
-          $query="INSERT INTO user_news_reg_info(index_number,fac_code,dept_code)
+          $query1="INSERT INTO user_news_reg_info(index_number,fac_code,dept_code)
                   VALUES('$user_name','$faculty','$department');";
 
-          $result=mysqli_query($conn,$query);
+          $result1=mysqli_query($conn,$query1);
+          
+           $query2="UPDATE user_info set registered='Yes' WHERE index_number='$user_name'";
+           $result2=mysqli_query($conn,$query2);
 
           $this->connection->endConnection($conn);
+    }
+    #deregister user
+    public function deregister($user_name){
+        
+        $this->connection=new Connection();
+          $conn =$this->connection->createConnection("user_information");
+
+          $query1="DELETE FROM user_news_reg_info WHERE index_number='$user_name';";
+
+          $result1=mysqli_query($conn,$query1);
+          
+           $query2="UPDATE user_info set registered='No' WHERE index_number='$user_name'";
+           $result2=mysqli_query($conn,$query2);
+
+          $this->connection->endConnection($conn);
+        
     }
 #ProvideNews.php
 #Get fac code and dept code for the corresponding index number

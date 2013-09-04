@@ -38,7 +38,12 @@ class CustomerInfo {
               $array["index_number"]=$row["index_number"];
               $array["first_name"]=$row["first_name"];
               $array["last_name"]=$row["last_name"] ;
-             
+              $array["department"]=$row["department"];
+              $array["faculty"]=$row["faculty"];
+              $array["year"]=$row["year_of_study"] ;
+               $array["semester"]=$row["semester"];
+              $array["email"]=$row["email_address"];
+              $array["registered"]=$row["registered"] ;
               
           }
 
