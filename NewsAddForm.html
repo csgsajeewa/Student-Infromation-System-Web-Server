@@ -1,0 +1,47 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ <h1> News Add Form   </h1>
+          <form enctype="multipart/form-data"  method= "GET"   action = "http://localhost/WebServer/AddNewsItem.php">
+            <table>
+
+
+              <tr>
+                 <td>Faculty (Code):</td>
+                 <td><input type='text' name='faculty' /></td>
+              </tr>
+              <tr>
+                 <td>Department(Code):</td>
+                 <td><input type='text' name='department' /></td>
+              </tr>
+              
+               <tr>
+                 <td>Heading:</td>
+                 <td><input type='text' name='heading' /> </td>
+              </tr>
+              
+               <tr>
+                 <td>Details:</td>
+                 <td><textarea name="details" cols="30" rows="4"></textarea> </td>
+              </tr>
+              
+              
+               <tr>
+                  <td colspan='2'>
+                   <a href="AdminManual.html"> Need Any Help? Go To Manual </a> 
+                  </td>
+              </tr>
+
+              <tr>
+                  <td colspan='2'>
+                  <input type='submit' name='addNews' value='ADDNEWS'/>
+                  </td>
+              </tr>
+
+              
+              
+         </table>
+
+      </form>
