@@ -1,13 +1,11 @@
-
-
-<?php header('Content-Type: text/xml'); 
-## used to provide news to users - this script is called by mobile client ?>
+<?php header('Content-Type: text/xml'); ?>
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<?php ##provide news of corresponding user ?>
 <rss version="2.0">
   <channel>
     <title>News Items</title>
-    <link>http://localhost/p_3/salesManagerForm.html/ </link>
-    <description>News Items</description>
+  
+    <description>News Items For User</description>
     <language>en-us</language>
     
     
@@ -24,7 +22,18 @@
  $dept_code=  $array1['dept_code'];
  
  $array2=$newsInfo->searchNews($fac_code, $dept_code);
+ for ($i= 0; $i < count($array2); $i++) {
+      echo '<item>';
+      echo '<title>' .$array2[$i]["heading"].'</title>';
+      echo '<details>'.$array2[$i]["details"] .'</details>';
+      echo '<date>' .$array2[$i]["date"] .'</date>';
+      
+      echo '</item>';
+ }
 
     
     
 ?>
+
+     </channel>
+</rss>

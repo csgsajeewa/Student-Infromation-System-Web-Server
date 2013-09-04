@@ -37,10 +37,10 @@ class NewsInfo {
           $i=0;
           while($row = mysqli_fetch_array($result))
           {
-              $array[i]["heading"]=$row["heading"];
-              $array[i]["details"]=$row["details"];
-              $array[i]["date"]=$row["date"] ;
-             
+              $array[$i]["heading"]=$row["heading"];
+              $array[$i]["details"]=$row["details"];
+              $array[$i]["date"]=$row["date"] ;
+             $i++;
               
           }
 

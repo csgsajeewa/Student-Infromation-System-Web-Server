@@ -31,7 +31,7 @@ class UserNewsRegInfo {
           $connection=new Connection();
           $conn =$connection->createConnection("user_information");
           
-          $query="SELECT FROM user_news_reg_info WHERE index_number='$index'";
+          $query="SELECT fac_code,dept_code FROM user_news_reg_info WHERE index_number='$index'";
        
           $result=mysqli_query($conn,$query) or die("error");
 
@@ -40,6 +40,8 @@ class UserNewsRegInfo {
               $array["fac_code"]=$row["fac_code"];
               $array["dept_code"]=$row["dept_code"] ;
           
+//            echo $array["fac_code"];
+//            echo $array["dept_code"];
             
           $connection->endConnection($conn);
           return $array;
