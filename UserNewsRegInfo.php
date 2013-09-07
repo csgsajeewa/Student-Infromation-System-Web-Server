@@ -67,6 +67,27 @@ class UserNewsRegInfo {
 
     }
 
+    #notification manager.php
+#Get index number for corresponding fac code and dept code 
+ public function searchByFDCode($fac_code,$dept_code){
+
+          $connection=new Connection();
+          $conn =$connection->createConnection("user_information");
+          
+          $query="SELECT index_number FROM user_news_reg_info WHERE fac_code='$fac_code' and dept_code='$dept_code'";
+       
+          $result=mysqli_query($conn,$query) or die("error");
+           $i=0;
+          while($row = mysqli_fetch_array($result))
+          {
+            $array[$i]=$row["index_number"];
+            $i++;
+          }
+            
+          $connection->endConnection($conn);
+          return $array;
+
+    }
 
    
 
