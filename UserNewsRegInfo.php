@@ -28,7 +28,7 @@ class UserNewsRegInfo {
           $this->connection->endConnection($conn);
     }
     #deregister user
-    public function deregister($user_name){
+    public function unregister($user_name){
         
         $this->connection=new Connection();
           $conn =$this->connection->createConnection("user_information");

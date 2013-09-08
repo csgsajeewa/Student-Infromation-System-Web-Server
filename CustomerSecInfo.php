@@ -52,7 +52,7 @@ class CustomerSecInfo {
           $connection->endConnection($conn);
           return $validated;
     }
-
+//not used to be removed
     public function get_customer_id($user_name,$password){
 
          $connection=new Connection();

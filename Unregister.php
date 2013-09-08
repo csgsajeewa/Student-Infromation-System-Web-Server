@@ -5,6 +5,6 @@ require_once './UserNewsRegInfo.php';
 $userNewsRegInfo=new UserNewsRegInfo();
 
  $index_number=trim($_GET['index']);
- $userNewsRegInfo->deregister($index_number);
- echo 'You have deregistered from the service sucessfully!!!!!!!!!!!!'
+ $userNewsRegInfo->unregister($index_number);
+ echo 'You Have Unregistered From The Service Sucessfully.'
 ?>
