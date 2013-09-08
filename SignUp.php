@@ -1,21 +1,12 @@
 
         <?php
-// used for new users///////////////////////////////////////////
+          // used for new users to register in the web site///////////////////////////////////////////
 
           require_once 'CustomerInfo.php';
           require_once 'CustomerSecInfo.php';
            $output_form=false;
-
-
-          $first_name="";
-          $last_name="";
-          $department="";
-          $faculty="";
-          $year_of_study="";
-          $semester="";
-          $email_address="";
-
-
+            $access1=new CustomerInfo();
+            $access2=new CustomerSecInfo();
            $first_name=trim($_GET["first_name"]);
            $last_name=trim($_GET["last_name"]);
            $email_address=trim($_GET["email_address"]);
@@ -29,24 +20,25 @@
            $user_name=trim($_GET["user_name"]);
 
 
-
-
-           if(empty ($first_name) || empty ($last_name) ||empty ($email_address)|| empty ($department)||empty ($faculty) ||empty ($year_of_study) ||empty ($semester)||empty($password) || empty($user_name))
+            #form validation is entirely done by mobile client so no need of this 
+           # only need to check whether user has already registered in the site
+           $array= $access1->searchByIndex($user_name);
+           if($array!=0 && count($array)==9)
            {
-                echo 'SORRY -----You need to fill all data fields';
-                $output_form=true;
+                echo "200"; //200 user exist
+               
 
            }
            else
            {
-             echo 'http://192.168.42.35/WebServer/AccountDetails.php?index='.$user_name;
-             
+             echo 'Registration is Successful';
+             # echo count($array);
            
 
 
-             $access1=new CustomerInfo();
+             
              $access1->enterData($user_name,$first_name,$last_name,$department,$faculty,$year_of_study,$semester,$email_address);
-             $access2=new CustomerSecInfo();
+             
              $access2->enterData($user_name,$password);
 
 

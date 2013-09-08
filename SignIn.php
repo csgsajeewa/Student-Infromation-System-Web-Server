@@ -17,10 +17,10 @@
          echo 'http://192.168.42.35/WebServer/AccountDetails.php?index='.$user_name;
 
       }
-
+     //pwd wrong
       else if(!$validate)
       {
-         echo 'Login unsucessful';
+         echo '210';
       }
    
 

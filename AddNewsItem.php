@@ -15,14 +15,14 @@
      $userNewsRegInfo=new UserNewsRegInfo();//2
      $gcmInfo=new GCMRegistrationInfo();//3
      $array=$userNewsRegInfo->searchByFDCode($fac_code, $dept_code);
-    # echo count($array);
+    echo count($array);
      $notificationManager=new NotificationManager();
      for ($index = 0; $index < count($array); $index++) {
           $reg_id=$gcmInfo->searchByIndex($array[$index]);
-     #     echo $reg_id;
+         echo $reg_id;
           $notificationManager->send_message($reg_id, $heading, $details);
      }
      $main_page_url="NewsAddForm.html";
-      header('Location:'. $main_page_url);
+   #   header('Location:'. $main_page_url);
      
 ?>

@@ -32,7 +32,7 @@ class CustomerInfo {
           $query="SELECT *FROM user_info WHERE index_number='$index_number'";
 
           $result=mysqli_query($conn,$query) or die("error");
-
+          $exist=false;
           while($row = mysqli_fetch_array($result))
           {
               $array["index_number"]=$row["index_number"];
@@ -44,11 +44,14 @@ class CustomerInfo {
                $array["semester"]=$row["semester"];
               $array["email"]=$row["email_address"];
               $array["registered"]=$row["registered"] ;
-              
+              $exist=true;
           }
 
           $connection->endConnection($conn);
+          if($exist)
           return $array;
+          else
+              return 0;
     }
 //register for news service not used remove later
      public function register($index_number){
