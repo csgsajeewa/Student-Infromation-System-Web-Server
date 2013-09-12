@@ -15,7 +15,7 @@ class UserNewsRegInfo {
     public function enterData($user_name,$faculty,$department){
 
           $this->connection=new Connection();
-          $conn =$this->connection->createConnection("user_information");
+          $conn =$this->connection->createConnection("user_information");//connect to user_information database
 
           $query1="INSERT INTO user_news_reg_info(index_number,fac_code,dept_code)
                   VALUES('$user_name','$faculty','$department');";
@@ -43,7 +43,7 @@ class UserNewsRegInfo {
           $this->connection->endConnection($conn);
         
     }
-#ProvideNews.php
+#used by ProvideNews.php
 #Get fac code and dept code for the corresponding index number
  public function searchByIndex($index){
 
@@ -67,7 +67,7 @@ class UserNewsRegInfo {
 
     }
 
-    #notification manager.php
+    #used by notification manager.php
 #Get index number for corresponding fac code and dept code 
  public function searchByFDCode($fac_code,$dept_code){
 

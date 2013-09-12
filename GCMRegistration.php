@@ -1,5 +1,5 @@
 <?php
-
+//enter data about GCM registration id
 require_once './GCMRegistrationInfo.php';
 
       $gcmRegistrationInfo=new GCMRegistrationInfo();
@@ -7,6 +7,5 @@ require_once './GCMRegistrationInfo.php';
       $key=  trim($_GET['key']);
       
       $gcmRegistrationInfo->enterData($user_name, $key);
-     # echo $user_name;
-      #echo $key;
+     
 ?>

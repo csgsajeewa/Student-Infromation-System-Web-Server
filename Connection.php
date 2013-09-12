@@ -1,5 +1,5 @@
 <?php
-
+# base class used by other classes to connect to the data base
  class Connection {
 
     private $server_name;
@@ -9,7 +9,7 @@
         $this->server_name="localhost";
         $this->user_name="root";
     }
-
+   //create connection to the data base 
     public function createConnection($database_name){
 
         $this->database_name=$database_name;

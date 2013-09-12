@@ -31,7 +31,7 @@ class NewsInfo {
           $connection=new Connection();
           $conn =$connection->createConnection("user_information");
          
-          $query="SELECT *FROM news_items WHERE fac_code='$fac_code' and dept_code='$dept_code'";
+          $query="SELECT *FROM news_items WHERE fac_code='$fac_code' and dept_code='$dept_code' ORDER BY date DESC;";
 
           $result=mysqli_query($conn,$query) or die("error");
           $i=0;

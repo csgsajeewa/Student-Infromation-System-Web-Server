@@ -1,4 +1,6 @@
 <?php
+#handles the security information about the user (user name,password)
+#user md5 to encrypt the password
 require_once  'Connection.php';
 
 class CustomerSecInfo {
@@ -7,7 +9,7 @@ class CustomerSecInfo {
     public function  __construct() {
       $database_name="user_information";
     }
-
+    //enter data to the table
     public function enterData($user_name,$password){
 
           $this->connection=new Connection();
@@ -17,12 +19,9 @@ class CustomerSecInfo {
                   VALUES('$user_name','$password');";
 
           $result=mysqli_query($conn,$query);
-         // print_r($result);
-
-            // mysqli_close($conn);
           $this->connection->endConnection($conn);
     }
-
+   //get data to validate the user
     public function getData($user_name,$password){
 
           $validated=false;
@@ -52,20 +51,7 @@ class CustomerSecInfo {
           $connection->endConnection($conn);
           return $validated;
     }
-//not used to be removed
-    public function get_customer_id($user_name,$password){
 
-         $connection=new Connection();
-         $conn =$connection->createConnection("user_information");
-
-         $query="SELECT *FROM user_sec_info WHERE user_name='$user_name'" AND "password='$password'";
-         $result=mysqli_query($conn,$query) or die("error");
-
-         $row = mysqli_fetch_array($result);
-         $id=$row["id"];
-         return $id;
-
-    }
 
 
 }

@@ -11,6 +11,6 @@ require_once  'UserNewsRegInfo.php';
 
      $userNewsRegInfo=new UserNewsRegInfo();
      $userNewsRegInfo->enterData($user_name, $fac_code, $dept_code);
-     echo "your fac is =".$fac_code."your dept is".$dept_code;
+     echo "your fac=".$fac_code." your dept=".$dept_code;
    
 ?>

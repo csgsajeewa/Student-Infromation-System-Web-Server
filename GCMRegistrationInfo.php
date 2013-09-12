@@ -1,5 +1,5 @@
 <?php
-
+#use to store data about GCM, index number and registration id given by GCM
 require_once  'Connection.php';
 
 class GCMRegistrationInfo {
@@ -8,22 +8,22 @@ class GCMRegistrationInfo {
     public function  __construct() {
 
     }
-  #use to store data about user when he signup 
+  #use to store GCM data about user when he has registered for the news service
     public function enterData($user_name,$key){
 
           $this->connection=new Connection();
           $conn =$this->connection->createConnection("user_information");
 
-          $query="INSERT INTO `gcm_info`(`index_number`, `key`) VALUES ('$user_name','$key')";
+          $query="INSERT INTO 'gcm_info'('index_number', 'key') VALUES ('$user_name','$key')";
 
           $result=mysqli_query($conn,$query);
-          echo $key;
+         
           $this->connection->endConnection($conn);
     }
 
 
 
- # this is used to display profile information
+ # this is used to get the key for the corresponding index number
     public function searchByIndex($index_number){
 
           $connection=new Connection();

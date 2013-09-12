@@ -13,14 +13,14 @@
 
       if($validate)
       {
-         //msg send to mobile app upon suceessfull login
+         //msg send to mobile app upon suceessfull login- this link will be used by the XML parser to retrieve user details
          echo 'http://192.168.42.35/WebServer/AccountDetails.php?index='.$user_name;
 
       }
      //pwd wrong
       else if(!$validate)
       {
-         echo '210';
+         echo '210';# server message for invalid signin
       }
    
 

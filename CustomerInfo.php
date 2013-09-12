@@ -1,4 +1,5 @@
 <?php
+#handles the customer information (profile infromation) user name and password are stored separately
 require_once  'Connection.php';
 
 class CustomerInfo {
@@ -16,7 +17,7 @@ class CustomerInfo {
           $query="INSERT INTO user_info(index_number,first_name,last_name,department,faculty,year_of_study,semester,registration_date,email_address)
                   VALUES('$user_name','$first_name','$last_name','$department','$faculty','$year_of_study','$semester',NOW(),'$email_address');";
 
-          $result=mysqli_query($conn,$query);
+           mysqli_query($conn,$query);
 
           $this->connection->endConnection($conn);
     }
@@ -53,27 +54,7 @@ class CustomerInfo {
           else
               return 0;
     }
-//register for news service not used remove later
-     public function register($index_number){
 
-          $connection=new Connection();
-          $conn =$connection->createConnection("user_information");
-         
-          $query="SELECT *FROM user_info WHERE index_number='$index_number'";
-
-          $result=mysqli_query($conn,$query) or die("error");
-
-          while($row = mysqli_fetch_array($result))
-          {
-              $array["index_number"]=$row["index_number"];
-              
-             
-              
-          }
-
-          $connection->endConnection($conn);
-          return $array;
-    }
    
    
 }
