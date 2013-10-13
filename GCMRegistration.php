@@ -1,5 +1,15 @@
 <?php
-//enter data about GCM registration id
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * enter data about GCM registration id
+ */
+?>
+
+
+<?php
+
 require_once './GCMRegistrationInfo.php';
 
       $gcmRegistrationInfo=new GCMRegistrationInfo();

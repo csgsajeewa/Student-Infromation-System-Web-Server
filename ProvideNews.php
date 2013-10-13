@@ -1,6 +1,14 @@
+<?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ *  ##provide news of corresponding user- xml parser will be used to retrieve data 
+ */
+?>
 <?php header('Content-Type: text/xml'); ?>
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
-<?php ##provide news of corresponding user- xml parser will be used to retrieve data ?>
+
 <rss version="2.0">
   <channel>
     <title>News Items</title>

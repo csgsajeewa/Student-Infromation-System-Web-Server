@@ -1,5 +1,16 @@
 <?php
-# base class used by other classes to connect to the data base
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * # base class used by other classes to connect to the data base
+ *
+ */
+?>
+
+
+<?php
+
  class Connection {
 
     private $server_name;

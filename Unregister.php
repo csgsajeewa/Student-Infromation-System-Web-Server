@@ -1,6 +1,15 @@
 <?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ *  #used to deregister students from news service 
+ */
+?>
 
- #used to deregister students from news service 
+<?php
+
+
  require_once './UserNewsRegInfo.php';
  $userNewsRegInfo=new UserNewsRegInfo();
 

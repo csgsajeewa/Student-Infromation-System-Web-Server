@@ -1,4 +1,14 @@
 <?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #use to store data about GCM, index number and registration id given by GCM
+ */
+?>
+
+
+<?php
 #use to store data about GCM, index number and registration id given by GCM
 require_once  'Connection.php';
 

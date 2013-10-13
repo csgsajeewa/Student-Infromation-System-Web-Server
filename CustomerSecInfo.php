@@ -1,6 +1,15 @@
 <?php
-#handles the security information about the user (user name,password)
-#user md5 to encrypt the password
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #handles the security information about the user (user name,password)
+   #user md5 to encrypt the password
+ */
+?>
+
+<?php
+
 require_once  'Connection.php';
 
 class CustomerSecInfo {

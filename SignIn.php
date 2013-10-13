@@ -1,7 +1,14 @@
-
+<?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #used for sign in purposes
+ */
+?>
 
 <?php
- #used for sign in purposes
+ 
   require_once  'CustomerSecInfo.php';
 
 

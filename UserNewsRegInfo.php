@@ -1,8 +1,15 @@
 <?php
-#relate to "user_news_reg_info table. It provides details about - 
-#index number
-#fac code
-#dept code
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #relate to "user_news_reg_info table. It provides details about - #index number#fac code#dept code
+ */
+?>
+
+
+<?php
+
 
 require_once  'Connection.php';
 

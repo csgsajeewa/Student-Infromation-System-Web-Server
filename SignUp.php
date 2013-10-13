@@ -1,4 +1,11 @@
-
+<?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #handles the customer information (profile infromation) user name and password are stored separately
+ */
+?>
         <?php
           // used for new users to register in the web site
 

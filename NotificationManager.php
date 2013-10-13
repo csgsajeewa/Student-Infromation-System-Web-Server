@@ -1,5 +1,14 @@
 <?php
-# when admin add news,  send messages to registered users via GCM
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * # when admin add news,  send messages to registered users via GCM
+ */
+?>
+
+<?php
+
 class NotificationManager {
 
     public function  __construct() {

@@ -1,5 +1,15 @@
 <?php
-#add news to the system, check registered users for each news item and then send notifications
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * add news to the system, check registered users for each news item and then send notifications
+ *
+ */
+?>
+
+<?php
+
   require_once  './NewsInfo.php';
   require_once './UserNewsRegInfo.php';
   require_once './NotificationManager.php';

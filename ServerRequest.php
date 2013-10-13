@@ -1,5 +1,13 @@
 <?php
-## only used for testing purposes now replaced by notification manager
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * ## only used for testing purposes now replaced by notification manager
+ */
+?>
+<?php
+
 // Message to be sent
 $title="Mahapola Sign";  # = $_POST['message'];
 $text="You Should sign mahapola before 5th May";

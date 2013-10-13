@@ -1,11 +1,17 @@
+
+
 <?php
 
 /**
  * Description of LocationInfo
- *
+ *provide location information
  * @author chamath sajeewa
  * chamaths.10@cse.mrt.ac.lk
  */
+
+?>
+
+<?php
 require_once  'Connection.php';
 class LocationInfo {
    private $connection;
@@ -27,7 +33,7 @@ class LocationInfo {
     }
 
 
-
+//use to send data
  public function searchLocations(){
 
           $connection=new Connection();

@@ -1,5 +1,13 @@
 <?php
-#relate to news items table add news items to the table by admin
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * #relate to news items table add news items to the table by admin
+ */
+?>
+<?php
+
 require_once  'Connection.php';
 
 class NewsInfo {

@@ -1,6 +1,17 @@
+<?php
+/*
+ * @author chamath sajeewa
+ * chamaths.10@cse.mrt.ac.lk
+ * 
+ * use to send profile details to user 
+ *
+ */
+?>
+
+
 <?php header('Content-Type: text/xml'); ?>
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
-<?php ##use to send profile details to user ?>
+
 <rss version="2.0">
   <channel>
     <title>Account Details</title>
