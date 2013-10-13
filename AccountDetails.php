@@ -7,11 +7,8 @@
  *
  */
 ?>
-
-
 <?php header('Content-Type: text/xml'); ?>
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
-
 <rss version="2.0">
   <channel>
     <title>Account Details</title>
